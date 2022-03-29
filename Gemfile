@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'spree', github: 'spree/spree', branch: 'master'
+gem 'spree', '>= 4.4'
+gem 'rubocop'
 
 gemspec

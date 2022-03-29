@@ -1,14 +1,13 @@
 Spree Comments
 ==============
 
-Spree Comments is an extension for Spree to allow commenting on different models via the
-admin ui and currently supports Orders & Shipments.
+* It only supports Spree 4.4, Rails 6.1, Ruby 3.0.2, not tested on other versions.
 
-Spree Comments also supports optional comment Types which can be defined per comment-able
-object (i.e. Order, Shipment, etc) via the admin Configuration tab.
+Spree Comments is an extension for Spree to allow commenting Orders in admin ui.
 
-This is based on a fork / rename of jderrett/spree-order-comments and is now an officially
-supported extension.
+Spree Comments supports comment Types which can be defined per comment-able via the admin Configuration tab.
+
+This is based on a fork / rename of spree-contrib/spree_comments.
 
 Notes:
 
@@ -19,7 +18,8 @@ Installation
 
 Add the following to your Gemfile (or check Versionfile for Spree versions requirements):
 
-    gem "spree_comments", github: 'spree-contrib/spree_comments'
+    gem 'spree_comments', github: 'cloudsailor/spree_comments'
+    gem 'acts_as_commentable', github: 'fatfreecrm/acts_as_commentable', branch: 'rails-61'
 
 Run:
 

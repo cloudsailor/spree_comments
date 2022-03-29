@@ -2,9 +2,9 @@
 Gem::Specification.new do |s|
   s.platform  = Gem::Platform::RUBY
   s.name      = 'spree_comments'
-  s.version   = '3.3.0'
-  s.summary   = 'Comments for orders and shipments'
-  s.required_ruby_version = '>= 2.1.3'
+  s.version   = '4.4.0'
+  s.summary   = 'Comments for orders'
+  s.required_ruby_version = '>= 3.0.2'
 
   s.author    = 'Rails Dog'
   s.email     = 'gems@railsdog.com'
@@ -15,12 +15,13 @@ Gem::Specification.new do |s|
   s.require_path  = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 3.1.0', '< 4.0'
+  spree_version = '>= 4.3.0', '< 5.0'
   s.add_dependency 'spree_api', spree_version
   s.add_dependency 'spree_backend', spree_version
   s.add_dependency 'spree_core', spree_version
   s.add_dependency 'spree_extension'
   s.add_dependency 'acts_as_commentable'
+  s.add_dependency 'deface', '~> 1.0'
 
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'factory_girl'
