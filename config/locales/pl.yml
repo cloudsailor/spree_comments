@@ -1,0 +1,17 @@
+---
+pl:
+  spree:
+    said: powiedział
+    for: dla
+    none: Nic
+    comments: Komentarze
+    comments_count: Komentarze (%{count})
+    comment: Komentarz
+    add_comment: Dodaj komentarz
+    add_comment_type: Dodaj typ komentarza
+    comment_types: Rodzaje komentarzy
+    manage_comment_types: Zarządzaj typami komentarzy
+    applies_to: Dotyczy
+    new_comment_type: Nowy typ komentarza
+    editing_comment_type: Edycja typu komentarza
+    back_to_comment_types_list: Powrót do listy typów komentarzy
