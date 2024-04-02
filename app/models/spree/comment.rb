@@ -2,7 +2,7 @@ class Spree::Comment < ActiveRecord::Base
   include ActsAsCommentable::Comment
 
   belongs_to :commentable, :polymorphic => true
-  belongs_to :comment_type
+  belongs_to :comment_type, optional: true
 
   default_scope { order('created_at ASC') }
   
