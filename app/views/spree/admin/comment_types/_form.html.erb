@@ -1,11 +1,13 @@
-<div id="admin_comment_type_form_fields " data-hook>
-  <%= f.field_container :name do %>
+<div id="admin_comment_type_form_fields" data-hook>
+  <div class="form-group">
     <%= f.label :name, Spree.t(:name) %><br />
-    <%= f.text_field :name, :class => 'form-control title' %>
+    <%= f.text_field :name, class: 'form-control title' %>
     <%= error_message_on :comment_type, :name %>
-  <% end %>
+  </div>
 
-  <%= f.hidden_field :applies_to, :value => f.object.nil? ? 'Order' : f.object.applies_to, :class => 'form-control title' %>
-
+  <div class="form-group">
+    <%= f.label :applies_to, Spree.t(:applies_to) %><br />
+    <%= f.select :applies_to, options_for_select([%w[Order Spree::Order]]), {}, class: 'form-control' %>
+  </div>
 </div>
 

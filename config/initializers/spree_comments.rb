@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.config.after_initialize do
-  Spree::Admin::MainMenu::DefaultConfigurationBuilder.prepend Spree::Admin::MainMenu::DefaultConfigurationBuilderDecorator
-  Rails.application.config.spree_backend.main_menu = Spree::Admin::MainMenu::DefaultConfigurationBuilder.new.build
+  Rails.application.config.spree_admin.settings_nav_partials << 'spree/admin/shared/link_to_comment_types'
+  Rails.application.config.spree_admin.order_page_body_partials << 'spree/admin/orders/comments'
 end

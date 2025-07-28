@@ -13,5 +13,5 @@ pl:
     manage_comment_types: Zarządzaj typami komentarzy
     applies_to: Dotyczy
     new_comment_type: Nowy typ komentarza
-    editing_comment_type: Edycja typu komentarza
+    editing_comment_type: Edycja typu komentarza '%{comment_type}'
     back_to_comment_types_list: Powrót do listy typów komentarzy
