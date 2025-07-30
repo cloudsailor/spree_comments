@@ -15,5 +15,7 @@ pl:
     new_comment_type: Nowy typ komentarza
     editing_comment_type: Edycja typu komentarza '%{comment_type}'
     back_to_comment_types_list: Powrót do listy typów komentarzy
-    teta_answer: Odpowiedź Tety
-    sent: Wysłano
+    teta:
+      answer: Odpowiedź TETA
+      sent: Wysłano
+      waiting: Czekujące

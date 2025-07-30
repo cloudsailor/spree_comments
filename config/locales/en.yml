@@ -15,5 +15,7 @@ en:
     new_comment_type: New Comment Type
     editing_comment_type: Editing Comment Type '%{comment_type}'
     back_to_comment_types_list: Back to Comment Types List
-    teta_answer: Teta Answer
-    sent: Sent
+    teta:
+      answer: TETA Answer
+      sent: Sent
+      waiting: Waiting

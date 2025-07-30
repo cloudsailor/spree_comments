@@ -1,7 +1,7 @@
 Spree Comments
 ==============
 
-* It only supports Spree 4.4, Rails 6.1, Ruby 3.0.2, not tested on other versions.
+* It only supports Spree 5.0.3, Rails 7.2, Ruby 3.3.8, not tested on other versions.
 
 Spree Comments is an extension for Spree to allow commenting Orders in admin ui.
 
@@ -19,7 +19,7 @@ Installation
 Add the following to your Gemfile (or check Versionfile for Spree versions requirements):
 
     gem 'spree_comments', github: 'cloudsailor/spree_comments'
-    gem 'acts_as_commentable', github: 'fatfreecrm/acts_as_commentable', branch: 'rails-61'
+    gem 'acts_as_commentable', git: 'https://github.com/jibranusman95/acts_as_commentable.git'
 
 Run:
 
