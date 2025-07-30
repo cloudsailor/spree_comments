@@ -15,10 +15,11 @@ Gem::Specification.new do |s|
   s.require_path  = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 4.3.0', '< 5.0'
-  s.add_dependency 'spree_api', spree_version
-  s.add_dependency 'spree_backend', spree_version
-  s.add_dependency 'spree_core', spree_version
+  spree_version = '~> 5.0', '>= 5.0.5'
+  s.add_dependency 'spree_emails', spree_version
+  s.add_dependency 'spree_admin', spree_version
+  s.add_dependency 'spree_sample', spree_version
+  s.add_dependency 'spree_storefront', spree_version
   s.add_dependency 'spree_extension'
   s.add_dependency 'acts_as_commentable'
   s.add_dependency 'deface', '~> 1.0'
@@ -37,7 +38,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'sprockets-rails'
-  s.add_development_dependency 'mysql2'
   s.add_development_dependency 'pg'
   s.add_development_dependency 'appraisal'
 end
