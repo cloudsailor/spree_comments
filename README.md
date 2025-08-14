@@ -19,7 +19,7 @@ Installation
 Add the following to your Gemfile (or check Versionfile for Spree versions requirements):
 
     gem 'spree_comments', github: 'cloudsailor/spree_comments'
-    gem 'acts_as_commentable', git: 'https://github.com/jibranusman95/acts_as_commentable.git'
+    gem 'acts_as_commentable', git: 'https://github.com/cloudsailor/acts_as_commentable'
 
 Run:
 
