@@ -10,6 +10,7 @@ pl:
     add_comment: Dodaj komentarz
     add_comment_type: Dodaj typ komentarza
     comment_types: Rodzaje komentarzy
+    comment_user: Użytkownik komentarza
     manage_comment_types: Zarządzaj typami komentarzy
     applies_to: Dotyczy
     new_comment_type: Nowy typ komentarza
