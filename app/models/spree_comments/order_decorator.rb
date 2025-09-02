@@ -6,7 +6,7 @@ module SpreeComments
 
       def with_answer?
         comments_text = self.comments.pluck(:comment).join(' ')
-        comments_text.downcase.include?('sent')
+        comments_text.downcase.include?('success')
       end
   end
 end

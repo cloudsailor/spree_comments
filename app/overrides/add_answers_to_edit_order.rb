@@ -19,21 +19,24 @@ class AddAnswersToEditOrder
             </button>
           </div>
           <div class="card-body mb-0 p-0 <% if @order.comments %>collapse<% else %>show<% end %>" id="order-comments">
-            <div class="order-line-items">
-              <div class="text-muted border-bottom py-2 px-3 font-size-sm order-line-items__row d-flex">
-                <div class="w-70"><%= Spree.t(:comment) %></div>
-                <div class="w-25"><%= Spree.t(:comment_type) %></div>
-                <div class="w-25"><%= Spree.t(:comment_user) %></div>
-              </div>
-      
-              <% @order.comments.each do |comment| %>
-                <div class="order-line-items__form d-flex border-bottom py-2 px-3">
-                  <div class="w-70"><%= comment.comment %></div>
-                  <div class="w-25"><%= comment.comment_type %></div>
-                  <div class="w-25"><%= comment.user.email %></div>
-                </div>
-              <% end %>
-            </div>
+            <table class="table table-sm table-bordered mb-0 border-top-0 border-bottom-0">
+              <thead class="thead-light">
+                <tr>
+                  <th class="w-75 border-left-0"><%= Spree.t(:comment) %></th>
+                  <th class="w-25"><%= Spree.t(:comment_type) %></th>
+                  <th class="w-25 border-right-0"><%= Spree.t(:comment_user) %></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @order.comments.each do |comment| %>
+                  <tr>
+                    <td class="border-left-0"><%= comment.comment %></td>
+                    <td><%= comment.comment_type&.name %></td>
+                    <td class="border-right-0"><%= comment.user&.email %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
           </div>
         </div>
       <% end %>
