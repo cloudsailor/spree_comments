@@ -1,7 +1,7 @@
 Spree Comments
 ==============
 
-* It only supports Spree 5.0.3, Rails 7.2, Ruby 3.3.8, not tested on other versions.
+* It only supports Spree 5.1.4, Rails 7.2, Ruby 3.4.4, not tested on other versions.
 
 Spree Comments is an extension for Spree to allow commenting Orders in admin ui.
 
