@@ -3,15 +3,11 @@ class CreateSpreeComments < SpreeExtension::Migration[4.2]
     create_table :spree_comments do |t|
       t.string :title, limit: 50
       t.text :comment
-      t.integer :comment_type_id
-      t.references :commentable, polymorphic: true
-      t.references :user
+      t.references :comment_type, index: true
+      t.references :commentable, index: true, polymorphic: true
+      t.references :user, index: true
       t.timestamps
     end
-
-    add_index :spree_comments, :commentable_type
-    add_index :spree_comments, :commentable_id
-    add_index :spree_comments, :user_id
   end
 
   def self.down
