@@ -10,6 +10,7 @@ en:
     add_comment: Add Comment
     add_comment_type: Add Comment Type
     comment_types: Comment Types
+    comment_date: Date
     comment_user: Comment User
     manage_comment_types: Manage comment types
     applies_to: Applies To

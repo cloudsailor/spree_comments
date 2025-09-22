@@ -20,10 +20,11 @@ class AddAnswersToEditOrder
           </div>
           <div class="card-body mb-0 p-0 <% if @order.comments %>collapse<% else %>show<% end %>" id="order-comments">
             <table class="table table-sm table-bordered mb-0 border-top-0 border-bottom-0">
-              <thead class="thead-light">
+              <thead class="thead-light text-center">
                 <tr>
                   <th class="w-75 border-left-0"><%= Spree.t(:comment) %></th>
-                  <th class="w-25"><%= Spree.t(:comment_type) %></th>
+                  <th class="w-10"><%= Spree.t(:comment_types) %></th>
+                  <th class="w-25"><%= Spree.t(:comment_date) %></th>
                   <th class="w-25 border-right-0"><%= Spree.t(:comment_user) %></th>
                 </tr>
               </thead>
@@ -31,7 +32,10 @@ class AddAnswersToEditOrder
                 <% @order.comments.each do |comment| %>
                   <tr>
                     <td class="border-left-0"><%= comment.comment %></td>
-                    <td><%= comment.comment_type&.name %></td>
+                    <td class="text-center"><%= comment.comment_type&.name %></td>
+                    <td class="w-15 cursor-pointer" data-action="click->row-link#openLink">
+                      <%= local_time_ago(comment.created_at, format: '%b %e, %Y %l:%M%P', class: 'with-tip') %>
+                    </td>
                     <td class="border-right-0"><%= comment.user&.email %></td>
                   </tr>
                 <% end %>
