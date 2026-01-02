@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.config.after_initialize do
-  Rails.application.config.spree_admin.settings_nav_partials << 'spree/admin/shared/link_to_comment_types'
+  settings_nav = Spree.admin.navigation.settings
+
+  settings_nav.add :comment_types,
+    label: :comment_types,
+    url: -> { spree.admin_comment_types_path },
+    icon: 'book',
+    if: -> { can?(:manage, Spree::CommentType) }
 end
